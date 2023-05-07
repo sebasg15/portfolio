@@ -1,0 +1,11 @@
+---
+const {tech, percent, class: className, bar} = Astro.props;
+---
+
+<div class='mt-2'>
+	<h2 class='text-3xl text-indigo-300 font-mono'>{tech}</h2>
+	<div class='flex items-center'>
+		<progress class={className} value={bar} max='100'></progress>
+		<span class='ml-3'>{percent}%</span>
+	</div>
+</div>

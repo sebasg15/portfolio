@@ -1,0 +1,112 @@
+---
+import Tech from '../components/technologies.astro';
+---
+
+<script>
+	let small = document.getElementById('img-small');
+	let big = document.getElementById('img-big');
+	let close = document.querySelector('.close');
+	let body = document.querySelector('body');
+	let projects = document.getElementById('projects');
+	let main = document.querySelector('main');
+
+	small.addEventListener('click', () => {
+		big.style.display = 'block';
+		big.style.position = 'fixed';
+		body.style.overflow = 'hidden';
+		projects.style.opacity = '0.2';
+		main.style.opacity = '0.2';
+	});
+	close.addEventListener('click', () => {
+		big.style.display = 'none';
+		body.style.overflow = '';
+		projects.style.opacity = '';
+		main.style.opacity = '';
+	});
+</script>
+
+<main class='flex flex-col relative items-center h-screen w-full'>
+	<h1 class='text-orange-400 text-6xl mt-12 font-[cursive] mb-7 text-center'>My resume</h1>
+	<h2 class='lg:w-1/2 text-center text-lg mb-6 sm:w-2/3'>
+		Here you can see the technologies that i have been learning and the skills that i have expanded and keep improving during 1 year as
+		web developer.
+	</h2>
+	<section class='flex lg:w-4/5 sm:w-[90%] justify-between relative'>
+		<ul class='list-disc mt-16'>
+			<li class='text-2xl sm:text-xl'>Self-taught</li>
+			<li class='lg:text-2xl sm:text-xl'>Responsability</li>
+			<li class='lg:text-2xl sm:text-xl'>Imagination and creativity</li>
+			<li class='lg:text-2xl sm:text-xl'>I like teamworking because i feel that is the best way to learn</li>
+			<li class='lg:text-2xl sm:text-xl'>Design</li>
+			<li class='lg:text-2xl sm:text-xl'>Adaptability</li>
+		</ul>
+		<div
+			id='img-small'
+			class='absolute hover:cursor-pointer lg:w-1/3 sm:1/2 ring-2 lg:bottom-0 sm:bottom-0 right-1/2 translate-x-1 ring-offset-8 ring-offset-transparent'>
+			<img src='/public/certificado.png' alt='' />
+		</div>
+
+		<aside
+			class='text-center self-end lg:p-8 sm:p-2 bg-gradient-to-r ring-8 ring-offset-4 ring-offset-purple-500 ring-violet-900 lg:w-1/5 sm:w-1/3'>
+			<h2 class='text-5xl text-red-400 text-center font-serif mb-8'>Skills</h2>
+			<Tech class='html' tech='Html' percent='80' bar='80' />
+			<Tech class='css' tech='Css' percent='70' bar='70' />
+			<Tech class='js' tech='JavaScript' percent='60' bar='60' />
+			<Tech class='react' tech='React' percent='50' bar='50' />
+			<Tech class='tw' tech='Tailwind' percent='70' bar='70' />
+			<Tech class='astro' tech='astro' percent='50' bar='50' />
+		</aside>
+	</section>
+</main>
+<div id='img-big' class='hidden relative top-1/2 left-1/2 w-2/5 -translate-x-1/2 -translate-y-1/2 z-10'>
+	<img class='border-4 border-black' src='/public/C-completo.png' alt='' />
+	<button class='close absolute -top-7 -right-3'>
+		<span class='text-6xl'>&times</span>
+	</button>
+</div>
+
+<style>
+	.html::-webkit-progress-value {
+		border-radius: 10px;
+		background-color: rgb(202, 58, 58);
+		color: white;
+	}
+	.html::-webkit-progress-bar {
+		border-radius: 10px;
+	}
+	.css::-webkit-progress-value {
+		border-radius: 10px;
+		background-color: rgb(37 99 235);
+	}
+	.css::-webkit-progress-bar {
+		border-radius: 10px;
+	}
+	.js::-webkit-progress-value {
+		border-radius: 10px;
+		background-color: rgb(224, 231, 24);
+	}
+	.js::-webkit-progress-bar {
+		border-radius: 10px;
+	}
+	.react::-webkit-progress-value {
+		border-radius: 10px;
+		background-color: #149eca;
+	}
+	.react::-webkit-progress-bar {
+		border-radius: 10px;
+	}
+	.tw::-webkit-progress-value {
+		border-radius: 10px;
+		background-color: #38bdf8;
+	}
+	.tw::-webkit-progress-bar {
+		border-radius: 10px;
+	}
+	.astro::-webkit-progress-value {
+		border-radius: 10px;
+		background-color: rgb(221, 122, 10);
+	}
+	.astro::-webkit-progress-bar {
+		border-radius: 10px;
+	}
+</style>
