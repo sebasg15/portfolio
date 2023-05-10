@@ -7,7 +7,7 @@ const {title} = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang='en'>
+<html lang='en' class='scroll-auto'>
 	<head>
 		<meta charset='UTF-8' />
 		<meta name='viewport' content='width=device-width' />
@@ -19,3 +19,16 @@ const {title} = Astro.props;
 		<slot />
 	</body>
 </html>
+<style>
+	html::-webkit-scrollbar {
+		width: 15px;
+	}
+	html::-webkit-scrollbar-thumb {
+		background-color: rgb(164, 166, 173);
+		border-radius: 10px;
+		height: 8px;
+	}
+	html::-webkit-scrollbar-track {
+		background-color: #4d4949;
+	}
+</style>
