@@ -8,7 +8,7 @@
 	];
 	const delay = 100;
 
-	contacts.addEventListener('click', () => {
+	contacts?.addEventListener('click', () => {
 		nets.forEach((net, i) => {
 			setTimeout(() => {
 				net.style.transform = 'translateY(-15px)';
@@ -19,7 +19,7 @@
 		});
 	});
 </script>
-<nav class='sticky bg-zinc-900 flex justify-end gap-14 items-center pr-14 h-16 top-0 z-20'>
+<nav class='sticky bg-zinc-900 flex justify-end gap-6 lg:gap-14 items-center pr-6 lg:pr-14 h-16 top-0 z-20'>
 	<div class='absolute left-14 hover:scale-110'>
 		<a class='text-orange-400 text-lg' href=''>Home</a>
 	</div>

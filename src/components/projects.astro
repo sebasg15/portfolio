@@ -2,14 +2,14 @@
 const {title, url, img, text, js, tw, react, html, css} = Astro.props;
 ---
 
-<article class='lg:w-2/5 sm:w-4/5 bg-stone-800 p-5 boder rounded-md shadow-md shadow-gray-900 my-10'>
+<article class='lg:w-2/5 w-4/5 bg-stone-800 p-5 boder rounded-md shadow-md shadow-gray-900 my-10'>
 	<h2 class='text-2xl text-red-400 text-center'>{title}</h2>
-	<div class='flex mt-5'>
-		<a href={url} target='_blank' class='max-w-xs'>
+	<div class='flex flex-col lg:flex-row mt-5'>
+		<a href={url} target='_blank' class='max-w-xs h-fit'>
 			<img src={`${img}`} alt='' />
 		</a>
 		<div class='flex flex-col ml-5'>
-			<h3>{text}</h3>
+			<h3 class='mt-4'>{text}</h3>
 			<div class='grid grid-cols-2 justify-items-center grid-rows-2 mt-6'>
 				{react && <p class='border-b-2 border-[#149eca]'>React</p>}
 				{tw && <p class='border-b-2 border-[#38bdf8]'>Tailwind</p>}
