@@ -1,5 +1,5 @@
 ---
-const {title, url, img, text, js, tw, react, html, css} = Astro.props;
+const {title, url, img, text, js, tw, react, html, css, ts} = Astro.props;
 ---
 
 <article class='lg:w-2/5 w-4/5 bg-stone-800 p-5 boder rounded-md shadow-md shadow-gray-900 my-10'>
@@ -16,6 +16,7 @@ const {title, url, img, text, js, tw, react, html, css} = Astro.props;
 				{html && <p class='border-b-2 h-fit border-red-600'>Html</p>}
 				{css && <p class='border-b-2 h-fit border-blue-600'>Css</p>}
 				{js && <p class='col-span-3 text-center pt-1 border-b-2 border-yellow-500'>JavaScript</p>}
+				{ts && <p class='col-span-3 text-center pt-1 border-b-2 border-yellow-600'>Typescript</p>}
 			</div>
 		</div>
 	</div>

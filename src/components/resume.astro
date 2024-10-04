@@ -5,7 +5,7 @@ import Tech from '../components/technologies.astro';
 <main class='flex flex-col relative items-center h-screen w-full'>
 	<h1 class='text-orange-400 text-6xl mt-12 font-[cursive] mb-7 text-center'>My resume</h1>
 	<h2 class='lg:w-1/2 text-center text-lg mb-6'>
-		Here you can see the technologies that i have been learning and the skills that i have expanded and keep improving during 1 year as
+		Here you can see the technologies that i have been learning and the skills that i have expanded and keep improving during 2 year as
 		web developer.
 	</h2>
 	<section class='flex flex-col lg:flex-row lg:items-start items-center lg:w-4/5 w-[90%] justify-between relative'>
@@ -19,14 +19,15 @@ import Tech from '../components/technologies.astro';
 		</ul>
 
 		<aside
-			class='text-center mt-8 self-center lg:self-end lg:p-8 p-2 bg-gradient-to-r ring-8 ring-offset-4 ring-offset-purple-500 ring-violet-900 lg:w-1/5 w-1/2'>
+			class='text-center -mt-5 self-center lg:self-end lg:p-8 p-2 bg-gradient-to-r ring-8 ring-offset-4 ring-offset-purple-500 ring-violet-900 lg:w-1/5 w-1/2'>
 			<h2 class='text-5xl text-red-400 text-center font-serif mb-8'>Skills</h2>
 			<Tech class='html' tech='Html' percent='80' bar='80' />
 			<Tech class='css' tech='Css' percent='70' bar='70' />
 			<Tech class='js' tech='JavaScript' percent='60' bar='60' />
+			<Tech class='ts' tech='TypeScript' percent='50' bar='50' />
 			<Tech class='react' tech='React' percent='50' bar='50' />
 			<Tech class='tw' tech='Tailwind' percent='70' bar='70' />
-			<Tech class='astro' tech='astro' percent='50' bar='50' />
+			<Tech class='astro' tech='Astro' percent='50' bar='50' />
 		</aside>
 	</section>
 </main>
@@ -49,9 +50,16 @@ import Tech from '../components/technologies.astro';
 	}
 	.js::-webkit-progress-value {
 		border-radius: 10px;
-		background-color: rgb(224, 231, 24);
+		background-color: rgb(242, 250, 27);
 	}
 	.js::-webkit-progress-bar {
+		border-radius: 10px;
+	}
+	.ts::-webkit-progress-value {
+		border-radius: 10px;
+		background-color: rgb(231, 187, 14);
+	}
+	.ts::-webkit-progress-bar {
 		border-radius: 10px;
 	}
 	.react::-webkit-progress-value {
